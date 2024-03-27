@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --Obsidian: #08100c;
+    --Licorice: #161110;
+    --Charcoal: #21242a;
+    --Alien: #1a2228;
+    --Neutral: #232325;
+    --Smokie: #23262a;
+    --Deep: #101923;
+    --Lavender: #f4f1f8;
+    --ColdSteel: #f8f7f4;
+    --Ivory: #fffff0;
+    --Marble: #f2f8fc;
+    --Pearl: #fcfcf7;
+    /* --Pearl:#459487; */
+  }
+}
