@@ -4,18 +4,34 @@
 
 @layer base {
   :root {
-    --Obsidian: #08100c;
-    --Licorice: #161110;
-    --Charcoal: #21242a;
-    --Alien: #1a2228;
-    --Neutral: #232325;
-    --Smokie: #23262a;
-    --Deep: #101923;
-    --Lavender: #f4f1f8;
-    --ColdSteel: #f8f7f4;
-    --Ivory: #fffff0;
-    --Marble: #f2f8fc;
-    --Pearl: #fcfcf7;
-    /* --Pearl:#459487; */
+    --Obsidian: 8 16 12;
+    --Licorice: 22 17 16;
+    --Charcoal: 33 36 42;
+    --Alien: 26 34 40;
+    --Neutral: 35 35 37;
+    --Smokie: 35 38 42;
+    --Deep: 16 25 35;
+    --Lavender: 244 241 248;
+    --ColdSteel: 248 247 244;
+    --Ivory: 255 255 240;
+    --Marble: 242 248 252;
+    --Pearl: 252 252 247;
+  }
+
+  *,
+  *::before,
+  *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+  }
+
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-size: 1.6rem;
   }
 }
