@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { ProfileCard } from "./components/ProfileCard/ProfileCard";
 import { RepoGrid } from "./components/Grids/RepoGrid";
+import { Carousel } from "./components/carousel";
 import { queryCoverProfile } from "./externalAPI/github";
 import type { GitAPIResponse } from "./externalAPI/types";
 function App() {
   const [coverProfile, updateCoverProfile] =
     useState<Array<GitAPIResponse> | null>(null);
+
   useEffect(() => {
     if (coverProfile === null) {
       queryCoverProfile(
@@ -19,6 +21,9 @@ function App() {
       );
     }
   }, [coverProfile]);
+  const flickityOptions = {
+    initialIndex: 2,
+  };
   console.log(coverProfile);
   return (
     <>
@@ -34,7 +39,7 @@ function App() {
         >
           Git Profiles
         </h1>
-
+        <Carousel />
         <div
           className={
             "flex flex-row justify-between align-top rounded-md border-Neutral border-2 w-full pl-20 pr-80 pt-10"
@@ -44,6 +49,7 @@ function App() {
             id="filters"
             className={" w-60  flex flex-col justify-start align-middle"}
           ></div>
+
           {coverProfile !== null ? (
             <div className=" flex flex-row justify-start items-start ">
               <ProfileCard profile={coverProfile[0]} />
