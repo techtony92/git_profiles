@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{html,tsx,ts,js,jsx}"],
+  darkMode: [`class`, `[data-mode="dark"]`],
   theme: {
     colors: {
       Obsidian: "rgb(var(--Obsidian) / 1)",

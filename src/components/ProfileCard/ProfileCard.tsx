@@ -9,7 +9,7 @@ import {
   FaLocationDot,
 } from "react-icons/fa6";
 import type { GitAPIResponse } from "../../externalAPI/types";
-export function ProfileCard({ profile }: { profile: GitAPIResponse }) {
+export function ProfileCard({ profile }: { profile?: GitAPIResponse }) {
   return (
     <div
       id="profile__userDetails"
@@ -21,7 +21,7 @@ export function ProfileCard({ profile }: { profile: GitAPIResponse }) {
           className={
             "w-[40rem] h-[40rem] border-8 border-Lavender border-solid rounded-[50%]"
           }
-          src={`${profile !== null ? profile.data.avatar_url : null}`}
+          src={`${profile !== null && profile !== undefined ? profile.data.avatar_url : null}`}
           alt=""
         />
       </div>

@@ -9,6 +9,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
     "prettier",
+    "plugin:storybook/recommended"
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parser: "@typescript-eslint/parser",
