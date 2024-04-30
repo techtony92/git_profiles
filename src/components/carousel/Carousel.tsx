@@ -20,7 +20,7 @@ const flickityOptions = {
 };
 
 type CarouselProps = {
-  children: React.JSX.Element | Array<React.JSX.Element>;
+  children?: React.JSX.Element | Array<React.JSX.Element>;
 };
 
 export function Carousel({ children }: CarouselProps) {
